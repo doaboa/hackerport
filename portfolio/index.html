@@ -1,21 +1,142 @@
 <html>
   <head>
+    <!-- Set the Title in the Browser Window Bar -->
     <title>Nathaniel's Portfolio</title>
 
     <style type="text/css">
       body {
-        background: url('background.jpg') no-repeat 20px 0;
+        background-color: #EFEFEF;              /* This color is overriden by the background image */
+        background-image: url('overview.jpg');  /* Add the image file 'overview.jpg' as the background */
+        background-repeat: no-repeat;           /* Only display the image once, instead of tiling or repeating */
+        background-size: cover;                 /* Fill the screen, no matter the size of the browser */
+        background-attachment: fixed;           /* Affix the background the window. Won't scroll with the page.
+                                                   Try removing this line, then scrolling */
+
+
+
+        /*
+          This is all of the above properties in one line, a shorthand version:
+
+          background: #EFEFEF url('overview.jpg') no-repeat fixed center center;
+        */
+
+        font-family: "Helvetica Neue";
+        font-size: 100%;                        /* Reset the default font size to about 16 pixels */
+      }
+
+      #headmast {
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 4px; /* Slightly curved borders */
+        color: #fff;
+        margin: 3em auto; /* Align to the center */
+        padding: 0.5em 1.5em;
+        width: 60em;
+      }
+
+      #content, #sidebar {
+        border-radius: 4px;
+        color: #EFEFEF;
+      }
+
+      #main {
+        margin: 0 auto;
+        overflow: auto;
+        width: 63em;
+      }
+
+      #content {
+        background: rgba(0, 0, 0, 0.7);
+        float: left;
+        margin-right: 5em;
+        padding: 1em;
+        width: 37em;
+      }
+
+      #sidebar {
+        background: rgba(0, 0, 0, 0.8);
+        float: left;
+        padding: 0.5em;
+        width: 18em;
+      }
+
+      #content p, #content h2, #sidebar p {
+        font-size: 1.2em;
+        line-height: 1.5em;
+        padding: 0.5em;
+      }
+
+      #content h2 {
+        border-bottom: solid #DDD 2px;
       }
 
       h1 {
-        color: purple;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 400px;
+        font-size: 3em;
+        font-weight: bold;
+        line-height: 1.15em;
       }
 
-      p {
-        color: black;
+      h1, p {
+        text-shadow: #333 3px 3px 3px;
+      }
+
+      /* Sidebar Picture */
+
+      #sidebar #picture {
+        overflow: hidden;
+        position: relative; /* Explain general relativity */
+      }
+
+      #sidebar #picture img {
+        border-radius: 4px;
+        margin-bottom: 1.5em;
+        width: 100%;
+      }
+
+      #sidebar #picture #picture-description {
+        background-color: rgba(0, 0, 0, 0.3);
+        bottom: -40px;
+        font-size: 12px;
+        height: 100px;
+        position: absolute;
+        transition: bottom 0.2s ease-in, background-color 0.3s linear;
+        width: 100%;
+      }
+
+      #sidebar #picture:hover #picture-description {
+        background-color: rgba(0, 0, 0, 0.6);
+        bottom: 0;
+      }
+
+      #footer {
+        color: #FFF;
+        margin: auto;
+        padding: 1.5em;
+        width: 60em;
+      }
+
+      img.github-ribbon {
+
+        border: 0;
+        left: 0;
+        position: fixed; /* Try `position: fixed;` and `position: absolute;` */
+        top: 0;
+
+        /*
+          Set up the hover effect here.
+          The `opacity` property sets the ribbon to 60% transparent,
+          and the `transition` property says handle any changes to
+          the `opacity` property with a 0.3-second transition.
+        */
+        opacity: 0.6;
+        transition: opacity 0.3s linear;
+      }
+
+      img.github-ribbon:hover {
+        /*
+          When we hover over the ribbon, switch to full opacity.
+          This will transition because of the transition property above.
+        */
+        opacity: 1;
       }
 
     </style>
@@ -23,21 +144,47 @@
   <body>
     <div id="headmast">
       <h1>Nathaniel's Portfolio</h1>
-      <h2>Tagline</h2>
-
-      <p>I'm Nathaniel Jones, I build things. I  live in Austin, TX.</p>
+      <p>I'm Nathaniel Jones. I build things in Austin, TX</p>
     </div>
 
+    <div id="main">
 
-    <div id="content">
-      <img src="soon.png" />
+      <div id="content">
+        <h2>About Me</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at viverra mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        </p>
 
+        <p>
+          Sed fringilla ipsum et mi varius ut rhoncus tellus convallis. Praesent orci magna, cursus eu euismod ac, molestie sit amet libero. Nam posuere viverra nisi ut ultricies. Aliquam bibendum, justo non tempus vehicula, nulla tellus hendrerit tellus, nec egestas risus dolor quis dolor. Fusce adipiscing orci vitae nisi euismod a luctus sapien volutpat.
+        </p>
+      </div>
+
+
+      <div id="sidebar">
+        <div id="picture">
+          <img src="me.jpg" width="160" />
+
+<!--           <div id="picture-description">
+            <h3>This is me.</h3>
+            <p>Click to enlarge</p>
+          </div> -->
+        </div>
+
+        <a class="twitter-timeline" href="https://twitter.com/thenthj" data-widget-id="326066076943253505">Tweets by @thenthj</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+      </div>
     </div>
 
+    <div id="footer">
+      Copyright &copy; 2013
+    </div>
 
-
-    (2) main portfolio area
-    (3) sidebar/about me
+    <a href="https://github.com/nthj">
+      <img class="github-ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub">
+    </a>
 
   </body>
 </html>
