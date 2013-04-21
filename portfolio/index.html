@@ -20,7 +20,7 @@
           background: #EFEFEF url('overview.jpg') no-repeat fixed center center;
         */
 
-        font-family: "Helvetica Neue";
+        font-family: 'Bubblegum Sans', cursive;
         font-size: 100%;                        /* Reset the default font size to about 16 pixels */
       }
 
@@ -56,6 +56,7 @@
         background: rgba(0, 0, 0, 0.8);
         float: right;
         padding: 0.5em;
+        /*transition: top 0.2s ease-in;*/
         width: 18em;
       }
 
@@ -140,6 +141,24 @@
       }
 
     </style>
+
+    <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+    <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#sidebar').css('left', $('#sidebar').offset().left + 'px');
+
+        $(window).scroll(function(){
+          if ( $(window).scrollTop() > $('#headmast').height() )
+          {
+            $('#sidebar').css({ position: 'fixed', top: '100px' });
+          }
+          else {
+            $('#sidebar').css({ position: 'absolute', top: 'auto' });
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <div id="headmast">
