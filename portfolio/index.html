@@ -33,7 +33,7 @@
         width: 60em;
       }
 
-      #content, #sidebar {
+      .panel, #sidebar {
         border-radius: 4px;
         color: #EFEFEF;
       }
@@ -44,28 +44,28 @@
         width: 63em;
       }
 
-      #content {
+      .panel {
         background: rgba(0, 0, 0, 0.7);
         float: left;
-        margin-right: 5em;
+        margin: 0 5em 1.5em 0;
         padding: 1em;
         width: 37em;
       }
 
       #sidebar {
         background: rgba(0, 0, 0, 0.8);
-        float: left;
+        float: right;
         padding: 0.5em;
         width: 18em;
       }
 
-      #content p, #content h2, #sidebar p {
+      .panel p, .panel h2, #sidebar p {
         font-size: 1.2em;
         line-height: 1.5em;
         padding: 0.5em;
       }
 
-      #content h2 {
+      .panel h2 {
         border-bottom: solid #DDD 2px;
       }
 
@@ -149,17 +149,6 @@
 
     <div id="main">
 
-      <div id="content">
-        <h2>About Me</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at viverra mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        </p>
-
-        <p>
-          Sed fringilla ipsum et mi varius ut rhoncus tellus convallis. Praesent orci magna, cursus eu euismod ac, molestie sit amet libero. Nam posuere viverra nisi ut ultricies. Aliquam bibendum, justo non tempus vehicula, nulla tellus hendrerit tellus, nec egestas risus dolor quis dolor. Fusce adipiscing orci vitae nisi euismod a luctus sapien volutpat.
-        </p>
-      </div>
-
 
       <div id="sidebar">
         <div id="picture">
@@ -176,6 +165,23 @@
 
 
       </div>
+      <div class="panel">
+        <h2>About Me</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at viverra mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        </p>
+
+      </div>
+
+      <div class="panel">
+        <h2>Where I'm At</h2>
+        <iframe
+          width="100%"
+          height="450"
+          frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+          src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=austin+tx&amp;aq=&amp;sll=30.307761,-97.753401&amp;sspn=0.679342,1.352692&amp;ie=UTF8&amp;hq=&amp;hnear=Austin,+Travis,+Texas&amp;ll=30.307689,-97.753601&amp;spn=0.679622,1.352692&amp;t=m&amp;z=10&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=austin+tx&amp;aq=&amp;sll=30.307761,-97.753401&amp;sspn=0.679342,1.352692&amp;ie=UTF8&amp;hq=&amp;hnear=Austin,+Travis,+Texas&amp;ll=30.307689,-97.753601&amp;spn=0.679622,1.352692&amp;t=m&amp;z=10" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+      </div>
+
     </div>
 
     <div id="footer">
