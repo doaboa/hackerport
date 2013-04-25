@@ -37,3 +37,54 @@ h1 {
 h1, p {
   text-shadow: #333 3px 3px 3px;
 }
+
+
+
+.panel, #sidebar {
+    border-radius: 4px;
+    color: #EFEFEF;
+  }
+
+  #main {
+    margin: 0 auto;
+    overflow: auto;
+    width: 63em;
+  }
+
+  .panel {
+    background: rgba(0, 0, 0, 0.7);
+    float: left;
+    margin: 0 5em 1.5em 0;
+    padding: 1em;
+    width: 37em;
+  }
+
+  #sidebar {
+    background: rgba(0, 0, 0, 0.8);
+    float: right;
+    padding: 0.5em;
+    width: 18em;
+  }
+
+  .panel p, .panel h2, #sidebar p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding: 0.5em;
+  }
+
+  .panel h2 {
+    border-bottom: solid #DDD 2px;
+  }
+
+  /* Sidebar Picture */
+
+  #sidebar #picture {
+    overflow: hidden;
+    position: relative; /* Explain general relativity */
+  }
+
+  #sidebar #picture img {
+    border-radius: 4px;
+    margin-bottom: 1.5em;
+    width: 100%;
+  }
