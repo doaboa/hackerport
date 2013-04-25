@@ -146,14 +146,24 @@
     <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
+        // Explicitly set the left positioning,
+        // based on the current position calculated by the Browser.
+        // This "locks" the sidebar to its current x-axis, even
+        // when we change the positioning strategy in a moment
         $('#sidebar').css('left', $('#sidebar').offset().left + 'px');
 
         $(window).scroll(function(){
+          // Has the visitor scrolled down past the headmast?
+          // If the headmast is 100 pixels tall, and
+          // the visitor has scrolled down 115 pixels, then this will return true
+          //
           if ( $(window).scrollTop() > $('#headmast').height() )
           {
             $('#sidebar').css({ position: 'fixed', top: '100px' });
           }
-          else {
+          else { // We are still at the top of the page
+
+            // Revert back from 'fixed' positioning
             $('#sidebar').css({ position: 'absolute', top: 'auto' });
           }
         });
