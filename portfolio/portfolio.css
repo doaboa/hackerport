@@ -104,4 +104,20 @@ h1, p {
     position: fixed; /* Try `position: fixed;` and `position: absolute;` */
     top: 0;
 
+    /*
+      Set up the hover effect here.
+      The `opacity` property sets the ribbon to 60% transparent,
+      and the `transition` property says handle any changes to
+      the `opacity` property with a 0.3-second transition.
+    */
+    opacity: 0.6;
+    transition: opacity 0.3s linear;
+  }
+
+  img.github-ribbon:hover {
+    /*
+      When we hover over the ribbon, switch to full opacity.
+      This will transition because of the transition property above.
+    */
+    opacity: 1;
   }
