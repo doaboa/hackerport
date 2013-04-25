@@ -1,0 +1,38 @@
+body {
+  background-color: #EFEFEF;              /* This color is overriden by the background image */
+  background-image: url('overview.jpg');  /* Add the image file 'overview.jpg' as the background */
+  background-repeat: no-repeat;           /* Only display the image once, instead of tiling or repeating */
+  background-size: cover;                 /* Fill the screen, no matter the size of the browser */
+  background-attachment: fixed;           /* Affix the background the window. Won't scroll with the page.
+                                             Try removing this line, then scrolling */
+
+
+
+  /*
+    This is all of the above properties in one line, a shorthand version:
+
+    background: #EFEFEF url('overview.jpg') no-repeat fixed center center;
+  */
+
+  font-size: 100%;                        /* Reset the default font size to about 16 pixels */
+}
+
+#headmast {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px; /* Slightly curved borders */
+  color: #fff;
+  margin: 3em auto; /* Align to the center */
+  padding: 0.5em 1.5em;
+  width: 60em;
+}
+
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.15em;
+}
+
+h1, p {
+  text-shadow: #333 3px 3px 3px;
+}
