@@ -95,3 +95,13 @@ h1, p {
     padding: 1.5em;
     width: 60em;
   }
+
+
+  img.github-ribbon {
+
+    border: 0;
+    left: 0;
+    position: fixed; /* Try `position: fixed;` and `position: absolute;` */
+    top: 0;
+
+  }
