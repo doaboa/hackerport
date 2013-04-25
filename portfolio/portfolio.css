@@ -88,3 +88,10 @@ h1, p {
     margin-bottom: 1.5em;
     width: 100%;
   }
+
+  #footer {
+    color: #FFF;
+    margin: auto;
+    padding: 1.5em;
+    width: 60em;
+  }
